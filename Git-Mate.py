@@ -5,13 +5,23 @@ from subprocess import *
 # Disable resizing (both horizontally and vertically)
 root.resizable(False, False)
 
+# Tops + Additionals
+name = Button(root, text="Git-Mate")
+name.grid(row=0, column=0)
+
+adt = Button(root, text="additionals")
+adt.grid(row=0, column=1)
+
+scnt = Label(root, text="Seasonal Undo Count")
+scnt.grid(row=0, column=2)
+
 # PATH - input
 path = Label(root, text="PATH")
-path.grid(row=0 ,column=0)
+path.grid(row=1 ,column=0)
 
 ep = Entry()
 ep.insert(0,"")
-ep.grid(row=0, column=1)
+ep.grid(columnspan=2, row=1, column=1)
 
 
 # RUN - CMD
