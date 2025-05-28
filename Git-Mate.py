@@ -2,6 +2,9 @@ from tkinter import *
 root = Tk()
 from subprocess import *
 
+# Disable resizing (both horizontally and vertically)
+root.resizable(False, False)
+
 # PATH - input
 
 
