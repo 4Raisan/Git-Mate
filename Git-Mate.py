@@ -6,6 +6,12 @@ from subprocess import *
 root.resizable(False, False)
 
 # PATH - input
+path = Label(root, text="PATH")
+path.grid(row=0 ,column=0)
+
+ep = Entry()
+ep.insert(0,"")
+ep.grid(row=0, column=1)
 
 
 # RUN - CMD
@@ -31,3 +37,6 @@ root.resizable(False, False)
 
 # 2. Branch Check
 # > git status
+
+
+root.mainloop() # ending
