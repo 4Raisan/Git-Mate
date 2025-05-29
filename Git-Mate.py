@@ -43,6 +43,8 @@ ec.grid(columnspan=2, row=2, column=1)
 
 # Done - Confirm
 # > git push origin main --force
+CButton = Button(root, text="Confirm")
+CButton.grid(columnspan=3, row=3, column=0)
 
 
 # Additionals
