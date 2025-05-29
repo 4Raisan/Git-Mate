@@ -50,9 +50,9 @@ def totcount():
 # Done - Confirm
 # > git push origin main --force
 Ctype = Label(root, text="Enter 'C' for confirm\nRemember their is no REDOs")
-Ctype.grid(row=3, column=1)
+Ctype.grid(rowspan=2, row=3, column=1)
 CButton = Button(root, text="Confirm", command=totcount)
-CButton.grid(columnspan=4, row=3, column=0)
+CButton.grid(columnspan=3, row=5, column=0)
 
 
 # Additionals
