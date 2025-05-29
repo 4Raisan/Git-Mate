@@ -12,7 +12,8 @@ name.grid(row=0, column=0)
 adt = Button(root, text="additionals")
 adt.grid(row=0, column=1)
 
-scnt = Label(root, text="Undos: ")
+refreshCount = 0
+scnt = Label(root, text=f"Undos: {refreshCount}")
 scnt.grid(row=0, column=2)
 
 # PATH - input
@@ -39,21 +40,26 @@ ec.grid(columnspan=2, row=2, column=1)
 # > git reset --hard HEAD~1
 
 # UPDATE Total count + Refresh GUI
+def totcount():
+    global refreshCount
+    refreshCount = 8
+    scnt = Label(root, text=f"Undos: {refreshCount}")
+    scnt.grid(row=0, column=2)
 
 
 # Done - Confirm
 # > git push origin main --force
-CButton = Button(root, text="Confirm")
+CButton = Button(root, text="Confirm", command=totcount)
 CButton.grid(columnspan=3, row=3, column=0)
 
 
 # Additionals
+
 
 # 1. Commit History
 # > git log --oneline
 
 # 2. Branch Check
 # > git status
-
 
 root.mainloop() # ending
