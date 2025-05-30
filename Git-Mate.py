@@ -28,7 +28,7 @@ epath.insert(0,"")
 epath.grid(columnspan=2, row=1, column=1)
 
 def checkpath():
-    readypath = f'r"{epath.get()}"'
+    readypath = epath.get().replace('"','')
     direpath = os.path.isdir(readypath)
     print(direpath)
 
@@ -72,7 +72,7 @@ def confirmproceed():
     econfirm.delete(0, END)
 
 
-CButton = Button(root, text="UNDO", command=(confirmproceed,checkpath))
+CButton = Button(root, text="UNDO", command=lambda: (confirmproceed(),checkpath()))
 CButton.grid(columnspan=3, row=6, column=0)
 
 
