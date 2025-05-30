@@ -64,6 +64,8 @@ econfirm.grid(columnspan=3, row=5, column=0)
 def confirmproceed():
     if (econfirm.get()).upper() == "C":
         totcount(ecount.get())
+    econfirm.delete(0, END)
+
 
 CButton = Button(root, text="UNDO", command=confirmproceed)
 CButton.grid(columnspan=3, row=6, column=0)
