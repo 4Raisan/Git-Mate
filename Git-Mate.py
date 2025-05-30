@@ -20,9 +20,9 @@ scnt.grid(row=0, column=2)
 path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=0)
 
-ep = Entry()
-ep.insert(0,"")
-ep.grid(columnspan=2, row=1, column=1)
+epath = Entry()
+epath.insert(0,"")
+epath.grid(columnspan=2, row=1, column=1)
 
 
 # RUN - CMD
@@ -32,9 +32,9 @@ ep.grid(columnspan=2, row=1, column=1)
 count = Label(root, text="UNDO : ")
 count.grid(row=2, column=0)
 
-ec = Entry()
-ec.insert(0,"")
-ec.grid(columnspan=2, row=2, column=1)
+ecount = Entry()
+ecount.insert(0,"")
+ecount.grid(columnspan=2, row=2, column=1)
 
 # RUN - CMD HEAD
 # > git reset --hard HEAD~1
