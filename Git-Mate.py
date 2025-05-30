@@ -31,7 +31,7 @@ epath.grid(columnspan=2, row=1, column=1)
 # > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
 
 # Count - input commit count
-count = Label(root, text="UNDO : ")
+count = Label(root, text="UNDOs : ")
 count.grid(row=2, column=0)
 
 ecount = Entry()
@@ -55,7 +55,7 @@ def totcount(new):
 # Done - Confirm
 # > git push origin main --force
 Ctype = Label(root, text="Enter 'C' for confirm\nRemember their is no REDOs")
-Ctype.grid(rowspan=2, row=3, column=1)
+Ctype.grid(rowspan=2, columnspan=3, row=3, column=0)
 
 econfirm = Entry()
 econfirm.insert(0,"")
@@ -65,7 +65,7 @@ def confirmproceed():
     if (econfirm.get()).upper() == "C":
         totcount(ecount.get())
 
-CButton = Button(root, text="Confirm", command=confirmproceed)
+CButton = Button(root, text="UNDO", command=confirmproceed)
 CButton.grid(columnspan=3, row=6, column=0)
 
 
