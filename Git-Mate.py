@@ -61,7 +61,11 @@ econfirm = Entry()
 econfirm.insert(0,"")
 econfirm.grid(columnspan=3, row=5, column=0)
 
-CButton = Button(root, text="Confirm", command= lambda: totcount(ecount.get()))
+def confirmproceed():
+    if (econfirm.get()).upper() == "C":
+        totcount(ecount.get())
+
+CButton = Button(root, text="Confirm", command=confirmproceed)
 CButton.grid(columnspan=3, row=6, column=0)
 
 
