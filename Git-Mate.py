@@ -1,6 +1,7 @@
 from tkinter import *
 root = Tk()
 from subprocess import *
+import os
 
 # Disable resizing (both horizontally and vertically)
 root.resizable(False, False)
@@ -26,6 +27,10 @@ epath = Entry()
 epath.insert(0,"")
 epath.grid(columnspan=2, row=1, column=1)
 
+def checkpath():
+    readypath = f'r"{epath.get()}"'
+    direpath = os.path.isdir(readypath)
+    print(direpath)
 
 # RUN - CMD
 # > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
@@ -67,7 +72,7 @@ def confirmproceed():
     econfirm.delete(0, END)
 
 
-CButton = Button(root, text="UNDO", command=confirmproceed)
+CButton = Button(root, text="UNDO", command=(confirmproceed,checkpath))
 CButton.grid(columnspan=3, row=6, column=0)
 
 
