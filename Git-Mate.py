@@ -12,11 +12,11 @@ name.grid(row=0, column=0)
 adt = Button(root, text="additionals")
 adt.grid(row=0, column=1)
 
-scnt = Label(root, text="Seasonal Undo Count")
+scnt = Label(root, text="Undos: ")
 scnt.grid(row=0, column=2)
 
 # PATH - input
-path = Label(root, text="PATH")
+path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=0)
 
 ep = Entry()
@@ -28,7 +28,12 @@ ep.grid(columnspan=2, row=1, column=1)
 # > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
 
 # Count - input commit count
+count = Label(root, text="UNDO : ")
+count.grid(row=2, column=0)
 
+ec = Entry()
+ec.insert(0,"")
+ec.grid(columnspan=2, row=2, column=1)
 
 # RUN - CMD HEAD
 # > git reset --hard HEAD~1
