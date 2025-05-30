@@ -5,6 +5,7 @@ from subprocess import *
 # Disable resizing (both horizontally and vertically)
 root.resizable(False, False)
 
+
 # Tops + Additionals
 name = Button(root, text="Git-Mate")
 name.grid(row=0, column=0)
@@ -15,6 +16,7 @@ adt.grid(row=0, column=1)
 refreshCount = 0
 scnt = Label(root, text=f"Undos: {refreshCount}")
 scnt.grid(row=0, column=2)
+
 
 # PATH - input
 path = Label(root, text="PATH : ")
@@ -33,16 +35,19 @@ count = Label(root, text="UNDO : ")
 count.grid(row=2, column=0)
 
 ecount = Entry()
-ecount.insert(0,"")
+ecount.insert(0,"1")
 ecount.grid(columnspan=2, row=2, column=1)
+
 
 # RUN - CMD HEAD
 # > git reset --hard HEAD~1
 
+
 # UPDATE Total count + Refresh GUI
-def totcount():
+def totcount(new):
     global refreshCount
-    refreshCount = 8
+    new = int(new)
+    refreshCount+=new
     scnt = Label(root, text=f"Undos: {refreshCount}")
     scnt.grid(row=0, column=2)
 
@@ -56,7 +61,7 @@ econfirm = Entry()
 econfirm.insert(0,"")
 econfirm.grid(columnspan=3, row=5, column=0)
 
-CButton = Button(root, text="Confirm", command=totcount)
+CButton = Button(root, text="Confirm", command= lambda: totcount(ecount.get()))
 CButton.grid(columnspan=3, row=6, column=0)
 
 
