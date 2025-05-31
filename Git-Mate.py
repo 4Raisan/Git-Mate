@@ -4,6 +4,8 @@ from subprocess import *
 import os
 
 root.title("Git-Mate")
+# custom windows size
+root.geometry("400x300")
 # Disable resizing (both horizontally and vertically)
 root.resizable(False, False)
 
@@ -20,7 +22,7 @@ scnt = Label(root, text=f"Undos: {refreshCount}")
 scnt.grid(row=0, column=2)
 
 
-# PATH ---------------------------------------------------
+# PATH ---------------------------------------------------S
 
 #---------Display
 path = Label(root, text="PATH : ")
@@ -48,7 +50,7 @@ def checkpath():
     readypath = epath.get().replace('"','')
     direpath = os.path.isdir(readypath)
     
-# PATH ---------------------------------------------------
+# PATH ---------------------------------------------------E
 
 
 # RUN - CMD
