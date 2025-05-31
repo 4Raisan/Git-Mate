@@ -3,6 +3,7 @@ root = Tk()
 from subprocess import *
 import os
 
+root.title("Git-Mate")
 # Disable resizing (both horizontally and vertically)
 root.resizable(False, False)
 
@@ -30,7 +31,7 @@ epath.grid(columnspan=2, row=1, column=1)
 def checkpath():
     readypath = epath.get().replace('"','')
     direpath = os.path.isdir(readypath)
-    print(direpath)
+    
 
 # RUN - CMD
 # > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
