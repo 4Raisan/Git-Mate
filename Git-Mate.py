@@ -26,7 +26,7 @@ scnt.grid(row=0, column=2, ipadx=10, ipady=3, padx=10, pady=10)
 
 #---------Display
 path = Label(root, text="PATH : ")
-path.grid(row=1 ,column=0)
+path.grid(row=1 ,column=0, ipadx=80, ipady=3, pady=10)
 
 epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
