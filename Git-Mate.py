@@ -19,7 +19,7 @@ adt.grid(row=0, column=1, ipadx=10, ipady=3, padx=10, pady=10)
 
 refreshCount = 0
 scnt = Label(root, text=f"Undos: {refreshCount}")
-scnt.grid(row=0, column=2)
+scnt.grid(row=0, column=2, ipadx=10, ipady=3, padx=10, pady=10)
 
 
 # PATH ---------------------------------------------------S
