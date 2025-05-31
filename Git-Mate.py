@@ -5,7 +5,7 @@ import os
 
 root.title("Git-Mate")
 # custom windows size
-root.geometry("400x300")
+#root.geometry("400x300")
 # Disable resizing (both horizontally and vertically)
 root.resizable(False, False)
 
