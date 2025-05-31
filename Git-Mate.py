@@ -12,7 +12,7 @@ root.resizable(False, False)
 
 # Tops + Additionals
 name = Button(root, text="Git-Mate")
-name.grid(row=0, column=0)
+name.grid(row=0, column=0, ipadx=20, padx=30)
 
 adt = Button(root, text="additionals")
 adt.grid(row=0, column=1)
