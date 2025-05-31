@@ -24,9 +24,15 @@ scnt.grid(row=0, column=2)
 path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=0)
 
-epath = Entry()
-epath.insert(0,"")
+epath = Entry(root, fg="grey")
+epath.insert(0,"Enter REPOs local path...")
 epath.grid(columnspan=2, row=1, column=1)
+
+def clearepath(event):
+        epath.delete(0, END)
+        epath.config(fg="black")
+epath.bind("<FocusIn>", clearepath)
+
 
 def checkpath():
     readypath = epath.get().replace('"','')
