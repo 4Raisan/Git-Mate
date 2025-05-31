@@ -21,6 +21,7 @@ scnt.grid(row=0, column=2)
 
 
 # PATH - input
+
 path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=0)
 
@@ -28,10 +29,17 @@ epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
 epath.grid(columnspan=2, row=1, column=1)
 
-def clearepath(event):
-        epath.delete(0, END)
-        epath.config(fg="black")
-epath.bind("<FocusIn>", clearepath)
+def focusepath(event):
+    epath.delete(0, END)
+    epath.config(fg="black")
+
+def nofocusepath(event):
+     if epath.get() == "":
+         epath.insert(0,"Enter REPOs local path...")
+         epath.config(fg="gray")
+
+epath.bind("<FocusIn>", focusepath)
+epath.bind("<FocusOut>", nofocusepath)
 
 
 def checkpath():
