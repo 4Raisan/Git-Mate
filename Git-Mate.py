@@ -14,6 +14,9 @@ root.resizable(False, False)
 name = Button(root, text="Git-Mate")
 name.grid(row=0, column=0, ipadx=10, ipady=3, padx=10, pady=10)
 
+guide = Button(root, text="User Guide")
+guide.grid(row=0, column=1, ipadx=10, ipady=3, padx=10, pady=10)
+
 adt = Button(root, text="additionals")
 adt.grid(row=0, column=2, ipadx=10, ipady=3, padx=10, pady=10)
 
