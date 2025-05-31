@@ -12,28 +12,28 @@ root.resizable(False, False)
 
 # Tops + Additionals + Guide + Counter
 name = Button(root, text="Git-Mate")
-name.grid(row=0, column=0, ipadx=10, ipady=3, padx=10, pady=10)
+name.grid(columnspan=2, row=0, column=0, ipadx=10, ipady=3, padx=10, pady=10)
 
 guide = Button(root, text="User Guide")
-guide.grid(row=0, column=1, ipadx=10, ipady=3, padx=10, pady=10)
+guide.grid(row=0, column=2, ipadx=10, ipady=3, padx=10, pady=10)
 
 adt = Button(root, text="additionals")
-adt.grid(row=0, column=2, ipadx=10, ipady=3, padx=10, pady=10)
+adt.grid(row=0, column=3, ipadx=10, ipady=3, padx=10, pady=10)
 
 refreshCount = 0
 scnt = Label(root, text=f"Undos: {refreshCount}")
-scnt.grid(row=0, column=3, ipadx=10, ipady=3, padx=10, pady=10)
+scnt.grid(row=0, column=4, ipadx=10, ipady=3, padx=10, pady=10)
 
 
 # PATH ---------------------------------------------------S
 
 #---------Display
 path = Label(root, text="PATH : ")
-path.grid(row=1 ,column=0)
+path.grid(row=1 ,column=1)
 
 epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
-epath.grid(columnspan=3, row=1, column=1, ipadx=28, ipady=3)
+epath.grid(columnspan=3, row=1, column=2, ipadx=77, ipady=3)
 
 #---------Focus
 def focusepath(event):
