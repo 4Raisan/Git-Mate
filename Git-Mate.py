@@ -35,11 +35,11 @@ justspace2.grid(row=0, column=10)
 
 #---------Display
 path = Label(root, text="PATH : ")
-#path.grid(row=1 ,column=1)
+path.grid(row=1 ,column=2)
 
 epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
-#epath.grid(columnspan=3, row=1, column=2, ipadx=75, ipady=3, pady=5)
+epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=66, pady=5)
 
 #---------Focus
 def focusepath(event):
