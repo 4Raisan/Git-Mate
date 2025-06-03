@@ -73,6 +73,10 @@ ecount = Entry(root, width=2)
 ecount.insert(0,"1")
 ecount.grid(row=2, column=3, pady=5, sticky='w')
 
+ecountplus = Button(root, text="+1")
+ecountplus.grid(row=2, column=3)
+
+
 
 # RUN - CMD HEAD
 # > git reset --hard HEAD~1
