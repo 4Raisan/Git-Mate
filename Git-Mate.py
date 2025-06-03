@@ -71,12 +71,13 @@ count.grid(row=2, column=2)
 
 ecount = Entry(root, width=2)
 ecount.insert(0,"1")
-ecount.grid(row=2, column=3, pady=5, sticky='w')
+ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
 
-ecountplus = Button(root, text="+1")
+ecountplus = Button(root, text=" + ")
 ecountplus.grid(row=2, column=3)
 
-
+ecountminus = Button(root, text=" - ")
+ecountminus.grid(row=2, column=3, sticky='e')
 
 # RUN - CMD HEAD
 # > git reset --hard HEAD~1
