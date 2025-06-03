@@ -39,7 +39,15 @@ path.grid(row=1 ,column=2)
 
 epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
-epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=86, pady=5)
+epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5, sticky='w')
+
+def clearepath():
+    epath.insert(0,"Enter REPOs local path...")
+    epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=86, pady=5)
+
+epathclear = Button(root, text="Clear Path", command=clearepath)
+epathclear.grid(row=2, column=8)
+
 
 #---------Focus
 def focusepath(event):
@@ -72,7 +80,7 @@ def minusone():
         ecountvalue-=1
         ecount.delete(0, END)
         ecount.insert(0, f"{ecountvalue}")
-        
+
 # PATH ---------------------------------------------------E
 
 
