@@ -66,6 +66,13 @@ def plusone():
     ecount.insert(0,f"{ecountvalue}")
     ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
     
+def minusone():
+    global ecountvalue
+    if ecountvalue>1:
+        ecountvalue-=1
+        ecount.delete(0, END)
+        ecount.insert(0, f"{ecountvalue}")
+        
 # PATH ---------------------------------------------------E
 
 
@@ -84,7 +91,7 @@ ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
 ecountplus = Button(root, text=" + ", command=plusone)
 ecountplus.grid(row=2, column=3)
 
-ecountminus = Button(root, text=" - ")
+ecountminus = Button(root, text=" - ", command=minusone)
 ecountminus.grid(row=2, column=3, sticky='e')
 
 # RUN - CMD HEAD
