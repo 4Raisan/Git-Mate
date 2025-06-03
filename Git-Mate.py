@@ -39,7 +39,7 @@ path.grid(row=1 ,column=2)
 
 epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
-epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=66, pady=5)
+epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=86, pady=5)
 
 #---------Focus
 def focusepath(event):
@@ -66,12 +66,12 @@ def checkpath():
 # > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
 
 # Count - input commit count
-count = Label(root, text="UNDOs : ")
-#count.grid(row=2, column=1)
+count = Label(root, text=" UNDOs : ")
+count.grid(row=2, column=2)
 
-ecount = Entry()
+ecount = Entry(root, width=2)
 ecount.insert(0,"1")
-#ecount.grid(row=2, column=2,ipady=3, pady=5)
+ecount.grid(row=2, column=3, pady=5, sticky='w')
 
 
 # RUN - CMD HEAD
