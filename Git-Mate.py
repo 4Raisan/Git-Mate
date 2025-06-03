@@ -58,6 +58,13 @@ epath.bind("<FocusOut>", nofocusepath)
 def checkpath():
     readypath = epath.get().replace('"','')
     direpath = os.path.isdir(readypath)
+
+def plusone():
+    global ecountvalue
+    ecountvalue+=1
+    ecount.delete(0, END)
+    ecount.insert(0,f"{ecountvalue}")
+    ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
     
 # PATH ---------------------------------------------------E
 
@@ -70,10 +77,11 @@ count = Label(root, text=" UNDOs : ")
 count.grid(row=2, column=2)
 
 ecount = Entry(root, width=2)
-ecount.insert(0,"1")
+ecountvalue = 1
+ecount.insert(0,f"{ecountvalue}")
 ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
 
-ecountplus = Button(root, text=" + ")
+ecountplus = Button(root, text=" + ", command=plusone)
 ecountplus.grid(row=2, column=3)
 
 ecountminus = Button(root, text=" - ")
