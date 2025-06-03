@@ -42,8 +42,8 @@ epath.insert(0,"Enter REPOs local path...")
 epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5, sticky='w')
 
 def clearepath():
-    epath.insert(0,"Enter REPOs local path...")
-    epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=86, pady=5)
+    epath.delete(0, END)
+    epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5)
 
 epathclear = Button(root, text="Clear Path", command=clearepath)
 epathclear.grid(row=2, column=8)
