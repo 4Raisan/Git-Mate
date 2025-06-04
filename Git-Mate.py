@@ -20,11 +20,11 @@ name.grid(columnspan=2, row=0, column=1, ipadx=10, ipady=3, pady=10,padx=3)
 guide = Button(root, text="User Guide")
 guide.grid(columnspan=2, row=0, column=3, ipadx=10, ipady=3, pady=10,padx=3)
 
-adt = Button(root, text="additionals")
+adt = Button(root, text="History")
 adt.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
 
 refreshCount = 0
-scnt = Label(root, text=f"  Undos: {refreshCount}")
+scnt = Label(root, text=f" Undos: {refreshCount}")
 scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
 
 justspace2 = Label(root, text="-")
@@ -39,7 +39,7 @@ path.grid(row=1 ,column=2)
 
 epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
-epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5, sticky='w')
+epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=60, pady=5, sticky='e')
 
 #---------Focus
 def focusepath(event):
@@ -75,7 +75,7 @@ def minusone():
 
 def clearepath():
     epath.delete(0, END)
-    epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5)
+    epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=60, pady=5)
 
 
 # PATH ---------------------------------------------------E
