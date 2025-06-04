@@ -121,9 +121,9 @@ def totcount(new):
 Ctype = Label(root, text="\nEnter 'C' for confirm\nRemember their is no REDOs")
 Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 
-econfirm = Entry()
-econfirm.insert(0,"")
-#econfirm.grid(columnspan=3, row=5, column=0)
+econfirm = Entry(root, width=7)
+econfirm.insert(0,":::::")
+econfirm.grid(columnspan=2, row=6, column=4, sticky='w')
 
 def confirmproceed():
     if (econfirm.get()).upper() == "C":
