@@ -118,12 +118,12 @@ def totcount(new):
 
 # Done - Confirm
 # > git push origin main --force
-Ctype = Label(root, text="\nEnter 'C' for confirm\nRemember their is no REDOs")
+Ctype = Label(root, text="\nConfirm Details & Action\nRemember their is no REDOs")
 Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 
-econfirm = Entry(root, width=2)
-econfirm.insert(0,"")
-econfirm.grid(row=6, column=4, sticky='e')
+#--------------------------------------------
+# Check box
+#--------------------------------------------
 
 def confirmproceed():
     if (econfirm.get()).upper() == "C":
