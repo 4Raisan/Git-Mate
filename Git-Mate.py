@@ -118,8 +118,8 @@ def totcount(new):
 
 # Done - Confirm
 # > git push origin main --force
-Ctype = Label(root, text="Enter 'C' for confirm\nRemember their is no REDOs")
-#Ctype.grid(rowspan=2, columnspan=3, row=3, column=0)
+Ctype = Label(root, text="\nEnter 'C' for confirm\nRemember their is no REDOs")
+Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 
 econfirm = Entry()
 econfirm.insert(0,"")
