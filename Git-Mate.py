@@ -41,14 +41,6 @@ epath = Entry(root, fg="grey")
 epath.insert(0,"Enter REPOs local path...")
 epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5, sticky='w')
 
-def clearepath():
-    epath.delete(0, END)
-    epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5)
-
-epathclear = Button(root, text="Clear Path", command=clearepath)
-epathclear.grid(row=2, column=8)
-
-
 #---------Focus
 def focusepath(event):
     epath.delete(0, END)
@@ -81,6 +73,11 @@ def minusone():
         ecount.delete(0, END)
         ecount.insert(0, f"{ecountvalue}")
 
+def clearepath():
+    epath.delete(0, END)
+    epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=72, pady=5)
+
+
 # PATH ---------------------------------------------------E
 
 
@@ -101,6 +98,10 @@ ecountplus.grid(row=2, column=3)
 
 ecountminus = Button(root, text=" - ", command=minusone)
 ecountminus.grid(row=2, column=3, sticky='e')
+
+epathclear = Button(root, text="Clear Path", command=clearepath)
+epathclear.grid(row=2, column=8)
+
 
 # RUN - CMD HEAD
 # > git reset --hard HEAD~1
