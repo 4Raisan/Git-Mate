@@ -121,8 +121,11 @@ def totcount(new):
 Ctype = Label(root, text="\nConfirm Details & Action\nRemember their is no REDOs")
 Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 
-#--------------------------------------------
 # Check box
+
+# Variable to track checkbox state (1 = checked, 0 = unchecked) 
+check_var = IntVar()
+
 #--------------------------------------------
 
 
