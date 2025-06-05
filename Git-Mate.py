@@ -124,7 +124,8 @@ Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 # Check box
 
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
-check_var = IntVar()
+check_vrbl = IntVar()
+checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl)
 
 #--------------------------------------------
 
