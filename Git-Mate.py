@@ -55,9 +55,6 @@ epath.bind("<FocusIn>", focusepath)
 epath.bind("<FocusOut>", nofocusepath)
 
 #---------Check Path Validity
-def checkpath():
-    readypath = epath.get().replace('"','')
-    direpath = os.path.isdir(readypath)
 
 def plusone():
     global ecountvalue
@@ -121,15 +118,22 @@ def totcount(new):
 Ctype = Label(root, text="\nConfirm Details & Action\nRemember their is no REDOs")
 Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 
-# Check box
+# Check box -----------------------------------
+
+#check box command
+def checkpath():
+    readypath = epath.get().replace('"','')
+    direpath = os.path.isdir(readypath)
+
 def check_conf():
     if check_vrbl.get():
-
+        checkpath()
 
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()
 checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=check_conf)
 checkbox.grid(row=6, column=3)
+
 #--------------------------------------------
 
 
