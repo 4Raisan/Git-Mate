@@ -128,7 +128,7 @@ def check_conf():
 
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()
-checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl)
+checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=check_conf)
 checkbox.grid(row=6, column=3)
 #--------------------------------------------
 
