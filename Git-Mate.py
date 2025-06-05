@@ -124,6 +124,7 @@ Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 def checkpath():
     readypath = epath.get().replace('"','')
     direpath = os.path.isdir(readypath)
+    print(direpath)
 
 def check_conf():
     if check_vrbl.get():
