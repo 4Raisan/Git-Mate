@@ -123,11 +123,13 @@ Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
 #check box command
 
 def check_conf():
+    global direpath
     if check_vrbl.get():
         readypath = epath.get().replace('"','')
         direpath = os.path.isdir(readypath)
-        print(direpath)
-
+    else:
+        direpath = False
+        
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()
 checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=check_conf)
