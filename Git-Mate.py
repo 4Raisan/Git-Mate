@@ -137,11 +137,13 @@ checkbox.grid(row=6, column=3)
 
 # Final UNDO --------------------------------
 
-final0button = Button(root, text="> UNDO <", bg='gray')
-final0button.grid(row=7, column=3)
+def fin0b():
+    final0button = Button(root, text="> UNDO <", bg='gray')
+    final0button.grid(row=7, column=3)
 
-final1button  = Button(root, text="> UNDO <", bg='red')
-final1button.grid(row=7, column=4)
+def fin1b():
+    final1button  = Button(root, text="> UNDO <", bg='red')
+    final1button.grid(row=7, column=4)
 #--------------------------------------------
 # totcount(ecount.get())
 # command=lambda: (confirmproceed(),checkpath())
