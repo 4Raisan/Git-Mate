@@ -127,8 +127,8 @@ def check_conf():
     if check_vrbl.get():
         readypath = epath.get().replace('"','')
         direpath = os.path.isdir(readypath)
-    else:
-        direpath = False
+
+direpath = False
         
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()
@@ -146,6 +146,10 @@ def fin0b():
 def fin1b():
     final1button  = Button(root, text="> UNDO <", bg='red')
     final1button.grid(row=7, column=4)
+
+fin0b()
+if direpath:
+    fin1b()
 #--------------------------------------------
 # totcount(ecount.get())
 # command=lambda: (confirmproceed(),checkpath())
