@@ -148,8 +148,9 @@ def fin1b():
     final1button.grid(row=7, column=4)
 
 fin0b()
-if direpath:
-    fin1b()
+def passcheck():
+    if direpath:
+        fin1b()
 #--------------------------------------------
 # totcount(ecount.get())
 # command=lambda: (confirmproceed(),checkpath())
