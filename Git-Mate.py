@@ -135,7 +135,12 @@ checkbox.grid(row=6, column=3)
 
 #--------------------------------------------
 
+# Final UNDO --------------------------------
 
+finalbutton = Button(root, text="> UNDO <", bg='red')
+finalbutton.grid(row=7, column=3)
+
+#--------------------------------------------
 # totcount(ecount.get())
 # command=lambda: (confirmproceed(),checkpath())
 
