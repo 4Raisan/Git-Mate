@@ -115,8 +115,8 @@ def totcount(new):
 
 # Done - Confirm
 # > git push origin main --force
-Ctype = Label(root, text="\nConfirm Details & Action\nRemember their is no REDOs")
-Ctype.grid(rowspan=3, columnspan=4, row=3, column=3)
+Ctype = Label(root, text="\nAvoid use, if your last commit is a File Upload !\nRemember their is no REDOs")
+Ctype.grid(rowspan=3, columnspan=8, row=3, column=2)
 
 # Check box -----------------------------------
 
