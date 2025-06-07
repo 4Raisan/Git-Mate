@@ -147,6 +147,10 @@ def fin1b():
     final1button  = Button(root, text="> UNDO <", bg='red')
     final1button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
+def signgreen():
+    pathsign = Label(root,text="✅")
+    pathsign.grid(row=1, column=1)
+
 fin0b()
 def passcheck():
     if direpath:
