@@ -151,6 +151,10 @@ def signgreen():
     pathsign = Label(root,text="✅")
     pathsign.grid(row=1, column=1)
 
+def signred():
+    pathsign = Label(root,text="❌")
+    pathsign.grid(row=1, column=1)
+
 fin0b()
 def passcheck():
     if direpath:
