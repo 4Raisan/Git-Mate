@@ -141,11 +141,11 @@ checkbox.grid(columnspan=4, row=6, column=3)
 
 def fin0b():
     final0button = Button(root, text="> UNDO <", bg='gray')
-    final0button.grid(row=7, column=3)
+    final0button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
 def fin1b():
     final1button  = Button(root, text="> UNDO <", bg='red')
-    final1button.grid(row=7, column=4)
+    final1button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
 fin0b()
 def passcheck():
