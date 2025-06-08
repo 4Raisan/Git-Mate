@@ -49,10 +49,12 @@ path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=2)
 
 epath = Entry(root, fg="grey")
-epath.insert(0,"Enter REPOs local path...")
+#epath.insert(0,"Enter REPOs local path...")
+epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
 epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=60, pady=5, sticky='e')
 
 #---------Focus
+''' Test
 def focusepath(event):
     epath.delete(0, END)
     epath.config(fg="black")
@@ -64,7 +66,7 @@ def nofocusepath(event):
 
 epath.bind("<FocusIn>", focusepath)
 epath.bind("<FocusOut>", nofocusepath)
-
+'''
 #---------Check Path Validity
 
 def plusone():
