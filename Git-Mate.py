@@ -143,7 +143,7 @@ direpath = False
         
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()
-checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=lambda: (check_conf(), passcheck()))
+checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=lambda: (check_conf(), passcheck(), avblhistory()))
 checkbox.grid(columnspan=4, row=6, column=3)
 
 #--------------------------------------------
