@@ -4,6 +4,7 @@ from subprocess import *
 import os
 
 root.title("Git-Mate")
+root.iconbitmap(r"C:\Users\4Raisan\Desktop\GitHub\Git-Mate\just-logo.ico")
 # custom windows size
 #root.geometry("400x300")
 # Disable resizing (both horizontally and vertically)
