@@ -22,7 +22,7 @@ name.grid(columnspan=2, row=0, column=1, ipadx=10, ipady=3, pady=10,padx=3)
 guide = Button(root, text="User Guide")
 guide.grid(columnspan=2, row=0, column=3, ipadx=10, ipady=3, pady=10,padx=3)
 
-history = Button(root, text="History")
+history = Button(root, text="History", state=DISABLED)
 history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
 
 refreshCount = 0
