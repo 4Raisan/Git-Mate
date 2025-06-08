@@ -139,11 +139,11 @@ checkbox.grid(columnspan=4, row=6, column=3)
 
 # Final UNDO --------------------------------
 
-def fin0b():
-    final0button = Button(root, text="> UNDO <", bg='gray')
+def fin0b():  # Denied
+    final0button = Button(root, text="> UNDO <", state=DISABLED)
     final0button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
-def fin1b():
+def fin1b():  # Approved
     final1button  = Button(root, text="> UNDO <", bg='red')
     final1button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
