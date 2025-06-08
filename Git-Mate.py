@@ -11,7 +11,8 @@ root.iconbitmap(r"C:\Users\4Raisan\Desktop\GitHub\Git-Mate\just-logo.ico")
 root.resizable(False, False)
 
 
-# Tops + Additionals + Guide + Counter
+# Top Row --------------------------------------------------------
+
 justspace1 = Label(root, text="-")
 justspace1.grid(row=0, column=0)
 
@@ -21,8 +22,8 @@ name.grid(columnspan=2, row=0, column=1, ipadx=10, ipady=3, pady=10,padx=3)
 guide = Button(root, text="User Guide")
 guide.grid(columnspan=2, row=0, column=3, ipadx=10, ipady=3, pady=10,padx=3)
 
-adt = Button(root, text="History")
-adt.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
+history = Button(root, text="History")
+history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
 
 refreshCount = 0
 scnt = Label(root, text=f" Undos: {refreshCount}")
@@ -31,8 +32,17 @@ scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
 justspace2 = Label(root, text="-")
 justspace2.grid(row=0, column=10)
 
+# Top Row Functions----------------
 
-# PATH ---------------------------------------------------S
+def avblhistory():
+    history = Button(root, text="History")
+    history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
+
+# Top Row Functions----------------
+#Z Top Row --------------------------------------------------------
+
+
+# PATH 2-Row---------------------------------------------------S
 
 #---------Display
 path = Label(root, text="PATH : ")
