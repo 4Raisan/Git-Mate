@@ -178,6 +178,8 @@ def passcheck():
         fin1b()
         avblhistory()
         signgreen()
+    else:
+        signred()
 #--------------------------------------------
 # totcount(ecount.get())
 # command=lambda: (confirmproceed(),checkpath())
