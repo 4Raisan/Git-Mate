@@ -19,7 +19,6 @@ justspace1.grid(row=0, column=0)
 
 justspace2 = Label(root, text="-")
 justspace2.grid(row=0, column=10)
-
 # ---
 
 name = Button(root, text="Git-Mate")
@@ -27,7 +26,6 @@ name.grid(columnspan=2, row=0, column=1, ipadx=10, ipady=3, pady=10,padx=3)
 
 guide = Button(root, text="User Guide")
 guide.grid(columnspan=2, row=0, column=3, ipadx=10, ipady=3, pady=10,padx=3)
-
 # ---
 
 refreshCount = 0
@@ -52,8 +50,7 @@ def avblhistory():
 #Z Top Row --------------------------------------------------------
 
 
-# PATH 2-Row---------------------------------------------------
-
+# PATH 1-Row---------------------------------------------------
 # Check Signs ---
 def signgreen():
     pathsign = Label(root,text="✅", fg='green')
@@ -75,8 +72,7 @@ def nofocusepath(event):
          epath.config(fg="gray")
 
 epath.bind("<FocusIn>", focusepath)
-epath.bind("<FocusOut>", nofocusepath)
-'''
+epath.bind("<FocusOut>", nofocusepath)'''
 
 # Path Label ---
 path = Label(root, text="PATH : ")
@@ -88,10 +84,10 @@ epath = Entry(root, fg="grey")
 epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
 epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=63, pady=5, sticky='e')
 
-#Z  PATH 2-Row---------------------------------------------------
+#Z  PATH 1-Row---------------------------------------------------
 
 
-# Numbers 3-Row---------------------------------------------------
+# Numbers 2-Row---------------------------------------------------
 # Main Functions of Row 3
 def plusone():
     global ecountvalue
@@ -111,8 +107,7 @@ def clearepath():
     epath.delete(0, END)
     epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=60, pady=5)
 
-# Display Path 3
-# Count - input commit count
+# Displaying
 count = Label(root, text=" UNDOs : ")
 count.grid(row=2, column=2)
 
@@ -130,30 +125,19 @@ ecountminus.grid(row=2, column=3, sticky='e')
 epathclear = Button(root, text="Clear Path", command=clearepath)
 epathclear.grid(row=2, column=8)
 
-#Z Numbers 3-Row---------------------------------------------------
+#Z Numbers 2-Row---------------------------------------------------
 
-# RUN - CMD
-# > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
 
-# RUN - CMD HEAD
-# > git reset --hard HEAD~1
+# Instruction 3/4/5-Row---------------------------------------------------
 
-# Done - Confirm
-# > git push origin main --force
-
-# 1. Commit History
-# > git log --oneline
-
-# 2. Branch Check
-# > git status
-
-#Instruction 4-Row---------------------------------------------------
 Ctype = Label(root, text="\nAvoid use, if your last commit is a File Upload !\nRemember their is no REDOs")
 Ctype.grid(rowspan=3, columnspan=8, row=3, column=2)
-#Z Instruction 4-Row---------------------------------------------------
+
+#Z Instruction 3/4/5-Row---------------------------------------------------
 
 
-# Check box 5-Row------------------------------------------------------
+# Check box 6-Row------------------------------------------------------
+
 def check_conf():
     global direpath
     if check_vrbl.get():
@@ -165,10 +149,12 @@ direpath = False
 check_vrbl = IntVar()
 checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=lambda: (check_conf(), passcheck()))
 checkbox.grid(columnspan=4, row=6, column=3)
-#Z Check box 5-Row------------------------------------------------------
+
+#Z Check box 6-Row------------------------------------------------------
 
 
-# Undo Row-6------------------------------------------------------
+# Undo Row-7------------------------------------------------------
+
 def fin0b():  # Denied
     final0button = Button(root, text="> UNDO <", state=DISABLED)
     final0button.grid(columnspan=4, row=7, column=3, ipadx=10)
@@ -188,7 +174,24 @@ def passcheck():
         signgreen()
     else:
         signred()
-#Z Undo Row-6------------------------------------------------------
+
+#Z Undo Row-7------------------------------------------------------
+
+
+# RUN - CMD
+# > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
+
+# RUN - CMD HEAD
+# > git reset --hard HEAD~1
+
+# Done - Confirm
+# > git push origin main --force
+
+# 1. Commit History
+# > git log --oneline
+
+# 2. Branch Check
+# > git status
 
 
 root.mainloop() # ending
