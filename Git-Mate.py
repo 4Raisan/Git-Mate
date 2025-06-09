@@ -163,8 +163,9 @@ def fin1b():  # Approved
 
 def undo():
     totcount(ecount.get())
+    pathsign.destroy()
 
-def signgreen():
+def signgreen1():
     pathsign = Label(root,text="✅")
     pathsign.grid(row=1, column=1)
 
