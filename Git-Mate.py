@@ -123,7 +123,7 @@ def totcount(new):
     new = int(new)
     refreshCount+=new
     scnt = Label(root, text=f"Undos: {refreshCount}")
-    scnt.grid(row=0, column=2)
+    scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
 
 
 # Done - Confirm
