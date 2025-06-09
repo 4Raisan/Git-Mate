@@ -173,6 +173,7 @@ def undoapproved():  # Approved
 
 def undo():
     totcount(ecount.get())
+    check_vrbl.set(0)
 
 undoDenied()
 def passcheck():
