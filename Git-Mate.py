@@ -157,7 +157,7 @@ def fin0b():  # Denied
     final0button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
 def fin1b():  # Approved
-    final1button  = Button(root, text="> UNDO <", bg='red')
+    final1button  = Button(root, text="> UNDO <", bg='red', command=undo)
     final1button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
 def undo():
