@@ -17,44 +17,53 @@ root.resizable(False, False)
 justspace1 = Label(root, text="-")
 justspace1.grid(row=0, column=0)
 
+justspace2 = Label(root, text="-")
+justspace2.grid(row=0, column=10)
+
+# ---
+
 name = Button(root, text="Git-Mate")
 name.grid(columnspan=2, row=0, column=1, ipadx=10, ipady=3, pady=10,padx=3)
 
 guide = Button(root, text="User Guide")
 guide.grid(columnspan=2, row=0, column=3, ipadx=10, ipady=3, pady=10,padx=3)
 
-history = Button(root, text="History", state=DISABLED)
-history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
+# ---
 
 refreshCount = 0
 scnt = Label(root, text=f" Undos: {refreshCount}")
 scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
 
-justspace2 = Label(root, text="-")
-justspace2.grid(row=0, column=10)
+def totcount(new):   # UPDATE Total count + Refresh GUI
+    global refreshCount
+    new = int(new)
+    refreshCount+=new
+    scnt = Label(root, text=f"Undos: {refreshCount}")
+    scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
 
-# Top Row Functions----------------
+# History ---
+history = Button(root, text="History", state=DISABLED)
+history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
 
 def avblhistory():
     history = Button(root, text="History")
     history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
 
-# Top Row Functions----------------
 #Z Top Row --------------------------------------------------------
 
 
-# PATH 2-Row---------------------------------------------------S
+# PATH 2-Row---------------------------------------------------
 
-#---------Display
-path = Label(root, text="PATH : ")
-path.grid(row=1 ,column=2)
+# Check Signs ---
+def signgreen():
+    pathsign = Label(root,text="✅", fg='green')
+    pathsign.grid(row=1, column=1)
 
-epath = Entry(root, fg="grey")
-#epath.insert(0,"Enter REPOs local path...")
-epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
-epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=63, pady=5, sticky='e')
+def signred():
+    pathsign = Label(root,text="❌", fg='red')
+    pathsign.grid(row=1, column=1)
 
-#---------Focus
+# Path Entry Focus ---
 ''' Test
 def focusepath(event):
     epath.delete(0, END)
@@ -68,8 +77,22 @@ def nofocusepath(event):
 epath.bind("<FocusIn>", focusepath)
 epath.bind("<FocusOut>", nofocusepath)
 '''
-#---------Check Path Validity
 
+# Path Label ---
+path = Label(root, text="PATH : ")
+path.grid(row=1 ,column=2)
+
+# Path Entry ---
+epath = Entry(root, fg="grey")
+#epath.insert(0,"Enter REPOs local path...")
+epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
+epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=63, pady=5, sticky='e')
+
+#Z  PATH 2-Row---------------------------------------------------
+
+
+# Numbers 3-Row---------------------------------------------------
+# Main Functions of Row 3
 def plusone():
     global ecountvalue
     ecountvalue+=1
@@ -88,13 +111,7 @@ def clearepath():
     epath.delete(0, END)
     epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=60, pady=5)
 
-
-# PATH ---------------------------------------------------E
-
-
-# RUN - CMD
-# > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
-
+# Display Path 3
 # Count - input commit count
 count = Label(root, text=" UNDOs : ")
 count.grid(row=2, column=2)
@@ -113,46 +130,45 @@ ecountminus.grid(row=2, column=3, sticky='e')
 epathclear = Button(root, text="Clear Path", command=clearepath)
 epathclear.grid(row=2, column=8)
 
+#Z Numbers 3-Row---------------------------------------------------
+
+# RUN - CMD
+# > cd "C:\Users\4Raisan\Desktop\GitHub\Git-Mate"
 
 # RUN - CMD HEAD
 # > git reset --hard HEAD~1
 
-
-# UPDATE Total count + Refresh GUI
-def totcount(new):
-    global refreshCount
-    new = int(new)
-    refreshCount+=new
-    scnt = Label(root, text=f"Undos: {refreshCount}")
-    scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
-
-
 # Done - Confirm
 # > git push origin main --force
+
+# 1. Commit History
+# > git log --oneline
+
+# 2. Branch Check
+# > git status
+
+#Instruction 4-Row---------------------------------------------------
 Ctype = Label(root, text="\nAvoid use, if your last commit is a File Upload !\nRemember their is no REDOs")
 Ctype.grid(rowspan=3, columnspan=8, row=3, column=2)
+#Z Instruction 4-Row---------------------------------------------------
 
-# Check box -----------------------------------
 
-#check box command
-
+# Check box 5-Row------------------------------------------------------
 def check_conf():
     global direpath
     if check_vrbl.get():
         readypath = epath.get().replace('"','')
         direpath = os.path.isdir(readypath)
-
 direpath = False
         
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()
 checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=lambda: (check_conf(), passcheck()))
 checkbox.grid(columnspan=4, row=6, column=3)
+#Z Check box 5-Row------------------------------------------------------
 
-#--------------------------------------------
 
-# Final UNDO --------------------------------
-
+# Undo Row-6------------------------------------------------------
 def fin0b():  # Denied
     final0button = Button(root, text="> UNDO <", state=DISABLED)
     final0button.grid(columnspan=4, row=7, column=3, ipadx=10)
@@ -164,14 +180,6 @@ def fin1b():  # Approved
 def undo():
     totcount(ecount.get())
 
-def signgreen():
-    pathsign = Label(root,text="✅")
-    pathsign.grid(row=1, column=1)
-
-def signred():
-    pathsign = Label(root,text="❌")
-    pathsign.grid(row=1, column=1)
-
 fin0b()
 def passcheck():
     if direpath:
@@ -180,17 +188,7 @@ def passcheck():
         signgreen()
     else:
         signred()
-#--------------------------------------------
-# totcount(ecount.get())
-# command=lambda: (confirmproceed(),checkpath())
+#Z Undo Row-6------------------------------------------------------
 
-
-# Additionals
-
-# 1. Commit History
-# > git log --oneline
-
-# 2. Branch Check
-# > git status
 
 root.mainloop() # ending
