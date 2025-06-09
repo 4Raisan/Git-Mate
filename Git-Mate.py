@@ -28,6 +28,15 @@ guide = Button(root, text="User Guide")
 guide.grid(columnspan=2, row=0, column=3, ipadx=10, ipady=3, pady=10,padx=3)
 # ---
 
+# History ---
+history = Button(root, text="History", state=DISABLED)
+history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
+
+def avblhistory():
+    history = Button(root, text="History")
+    history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
+
+# Count ---
 refreshCount = 0
 scnt = Label(root, text=f" Undos: {refreshCount}")
 scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
@@ -38,14 +47,6 @@ def totcount(new):   # UPDATE Total count + Refresh GUI
     refreshCount+=new
     scnt = Label(root, text=f"Undos: {refreshCount}")
     scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
-
-# History ---
-history = Button(root, text="History", state=DISABLED)
-history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
-
-def avblhistory():
-    history = Button(root, text="History")
-    history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
 
 #Z Top Row --------------------------------------------------------
 
@@ -87,8 +88,9 @@ epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=63, pady=5, sticky='e')
 #Z  PATH 1-Row---------------------------------------------------
 
 
+# DONE
 # Numbers 2-Row---------------------------------------------------
-# Main Functions of Row 3
+# Main Functions of Row 2
 def plusone():
     global ecountvalue
     ecountvalue+=1
@@ -126,6 +128,7 @@ epathclear = Button(root, text="Clear Path", command=clearepath)
 epathclear.grid(row=2, column=8)
 
 #Z Numbers 2-Row---------------------------------------------------
+# DONE
 
 
 # Instruction 3/4/5-Row---------------------------------------------------
