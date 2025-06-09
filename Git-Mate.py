@@ -9,6 +9,7 @@ root.iconbitmap(r"C:\Users\4Raisan\Desktop\GitHub\Git-Mate\just-logo.ico")
 #root.geometry("400x300")
 # Disable resizing (both horizontally and vertically)
 root.resizable(False, False)
+#root.configure(bg='black')
 
 
 # Top Row --------------------------------------------------------
