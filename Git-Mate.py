@@ -133,8 +133,8 @@ epathclear.grid(row=2, column=8)
 
 # Instruction 3/4/5-Row---------------------------------------------------
 
-Ctype = Label(root, text="\nAvoid use, if your last commit is a File Upload !\nRemember their is no REDOs")
-Ctype.grid(rowspan=3, columnspan=8, row=3, column=2)
+instruction_avoid = Label(root, text="\nAvoid use, if your last commits have File Uploads !", fg='red')
+instruction_avoid.grid(rowspan=2, columnspan=8, row=3, column=2)
 
 #Z Instruction 3/4/5-Row---------------------------------------------------
 
