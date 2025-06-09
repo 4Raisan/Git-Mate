@@ -177,6 +177,7 @@ def passcheck():
     if direpath:
         fin1b()
         avblhistory()
+        signgreen()
 #--------------------------------------------
 # totcount(ecount.get())
 # command=lambda: (confirmproceed(),checkpath())
