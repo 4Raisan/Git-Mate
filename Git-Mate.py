@@ -155,21 +155,21 @@ checkbox.grid(columnspan=4, row=6, column=3)
 
 # Undo Row-7------------------------------------------------------
 
-def fin0b():  # Denied
+def undoDenied():  # Denied
     final0button = Button(root, text="> UNDO <", state=DISABLED)
     final0button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
-def fin1b():  # Approved
+def undoapproved():  # Approved
     final1button  = Button(root, text="> UNDO <", bg='red', command=undo)
     final1button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
 def undo():
     totcount(ecount.get())
 
-fin0b()
+undoDenied()
 def passcheck():
     if direpath:
-        fin1b()
+        undoapproved()
         avblhistory()
         signgreen()
     else:
