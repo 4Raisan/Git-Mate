@@ -149,7 +149,12 @@ instruction_redo.grid(columnspan=8, row=5, column=1)
 
 
 # Check box 6-Row------------------------------------------------------
-        
+def checkflow():
+    if check_vrbl.get()==1:
+        passcheck()
+    else:
+        pathsign.destroy()   
+
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()   # check_vrbl is an IntVar object - check_vrbl.get() 1/0
 checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=checkflow)
@@ -174,27 +179,17 @@ undoDenied()
 
 
 # MAIN FLOW and Validation
-def checkflow():
-    if check_vrbl.get()==1:
-        check_conf()
-        passcheck()
-    else:
-        pathsign.destroy()
-
 
 def passcheck():
+    global direpath
+    readypath = epath.get().replace('"','')
+    direpath = os.path.isdir(readypath)
     if direpath:
         undoapproved()
         avblhistory()
         signgreen()
     else:
-        signred()
-
-def check_conf():
-    global direpath
-    if check_vrbl.get():
-        readypath = epath.get().replace('"','')
-        direpath = os.path.isdir(readypath)
+        signred()        
 direpath = False
 
 def undo():
