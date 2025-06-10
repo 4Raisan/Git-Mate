@@ -149,22 +149,8 @@ instruction_redo.grid(columnspan=8, row=5, column=1)
 
 
 # Check box 6-Row------------------------------------------------------
-
-def check_conf():
-    global direpath
-    if check_vrbl.get():
-        readypath = epath.get().replace('"','')
-        direpath = os.path.isdir(readypath)
-direpath = False
         
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
-def checkflow():
-    if check_vrbl.get()==1:
-        check_conf()
-        passcheck()
-    else:
-        pathsign.destroy()
-
 check_vrbl = IntVar()   # check_vrbl is an IntVar object - check_vrbl.get() 1/0
 checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=checkflow)
 checkbox.grid(columnspan=4, row=6, column=3)
@@ -182,11 +168,20 @@ def undoapproved():  # Approved
     final1button  = Button(root, text="> UNDO <", bg='red', command=undo)
     final1button.grid(columnspan=4, row=7, column=3, ipadx=10)
 
-def undo():
-    totcount(ecount.get())
-    check_vrbl.set(0)
-
 undoDenied()
+
+#Z Undo Row-7------------------------------------------------------
+
+
+# MAIN FLOW and Validation
+def checkflow():
+    if check_vrbl.get()==1:
+        check_conf()
+        passcheck()
+    else:
+        pathsign.destroy()
+
+
 def passcheck():
     if direpath:
         undoapproved()
@@ -195,7 +190,18 @@ def passcheck():
     else:
         signred()
 
-#Z Undo Row-7------------------------------------------------------
+def check_conf():
+    global direpath
+    if check_vrbl.get():
+        readypath = epath.get().replace('"','')
+        direpath = os.path.isdir(readypath)
+direpath = False
+
+def undo():
+    totcount(ecountvalue)
+    check_vrbl.set(0)
+    counter()
+
 
 
 # RUN - CMD
