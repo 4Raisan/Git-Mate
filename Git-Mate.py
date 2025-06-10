@@ -93,14 +93,14 @@ epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=63, pady=5, sticky='e')
 # Numbers 2-Row---------------------------------------------------
 # Main Functions of Row 2
 def plusone():
-    global ecountvalue
+    global ecountvalue, ecount
     ecountvalue+=1
     ecount.delete(0, END)
     ecount.insert(0,f"{ecountvalue}")
     ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
     
 def minusone():
-    global ecountvalue
+    global ecountvalue, ecount
     if ecountvalue>1:
         ecountvalue-=1
         ecount.delete(0, END)
@@ -114,10 +114,13 @@ def clearepath():
 count = Label(root, text=" UNDOs : ")
 count.grid(row=2, column=2)
 
-ecount = Entry(root, width=2)
-ecountvalue = 1
-ecount.insert(0,f"{ecountvalue}")
-ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
+def counter():
+    global ecountvalue, ecount
+    ecount = Entry(root, width=2)
+    ecountvalue = 1
+    ecount.insert(0,f"{ecountvalue}")
+    ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
+counter()
 
 ecountplus = Button(root, text=" + ", command=plusone)
 ecountplus.grid(row=2, column=3)
