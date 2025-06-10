@@ -54,6 +54,7 @@ def totcount(new):   # UPDATE Total count + Refresh GUI
 # PATH 1-Row---------------------------------------------------
 # Check Signs ---
 def signgreen():
+    global pathsign
     pathsign = Label(root,text="✅", fg='green')
     pathsign.grid(row=1, column=1)
 
@@ -154,8 +155,8 @@ def check_conf():
 direpath = False
         
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
-check_vrbl = IntVar()
-checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=lambda: (check_conf(), passcheck()))
+check_vrbl = IntVar()   # check_vrbl is an IntVar object - check_vrbl.get() 1/0
+checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=checkflow)
 checkbox.grid(columnspan=4, row=6, column=3)
 
 #Z Check box 6-Row------------------------------------------------------
