@@ -195,6 +195,7 @@ direpath = False
 def undo():
     totcount(ecountvalue)
     check_vrbl.set(0)
+    undoDenied()
     counter()
 
 
