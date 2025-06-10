@@ -193,11 +193,11 @@ def passcheck():
 direpath = False
 
 def undo():
-    totcount(ecountvalue)
+    totcount(ecountvalue) 
     check_vrbl.set(0)
     undoDenied()
+    pathsign.destroy()
     counter()
-
 
 
 # RUN - CMD
