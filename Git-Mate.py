@@ -159,8 +159,8 @@ def checkflow():
     if check_vrbl.get()==1:
         check_conf()
         passcheck()
-    #else:
-     #   pathsign.destroy()
+    else:
+        pathsign.destroy()
 
 check_vrbl = IntVar()   # check_vrbl is an IntVar object - check_vrbl.get() 1/0
 checkbox =  Checkbutton(root, text="Confirm and Check Details", variable=check_vrbl, command=checkflow)
