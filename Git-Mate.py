@@ -193,11 +193,11 @@ def passcheck():
 direpath = False
 
 def undo():
-    totcount(ecountvalue) 
-    check_vrbl.set(0)
-    undoDenied()
-    pathsign.destroy()
-    counter()
+    totcount(ecountvalue)   # Total UNDOs Update
+    check_vrbl.set(0)   # Checkbox - Uncheck
+    undoDenied()    # Disable undo button
+    pathsign.destroy()  # Destroy the path Signs
+    counter()   # Reset undo-counter
 
 
 # RUN - CMD
