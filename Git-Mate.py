@@ -33,7 +33,7 @@ history = Button(root, text="History", font=("Courier New", 9, 'bold'), state=DI
 history.grid(columnspan=2, row=0, column=5, ipadx=9, ipady=2, pady=10,padx=3)
 
 def avblhistory():
-    history = Button(root, text="History")
+    history = Button(root, text="History", bg="#C100F7", font=("Courier New", 9, 'bold'))
     history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
 
 # Count ---
