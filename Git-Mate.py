@@ -21,11 +21,11 @@ justspace2 = Label(root, text="-")
 justspace2.grid(row=0, column=10)
 # ---
 
-name = Button(root, text="Git-Mate", bg='#00FF00')
-name.grid(columnspan=2, row=0, column=1, ipadx=10, ipady=3, pady=10,padx=3)
+name = Button(root, text="Git-Mate", bg='#00FF00', font=("Courier New", 9, 'bold'))
+name.grid(columnspan=2, row=0, column=1, ipadx=9, ipady=2, pady=10,padx=3)
 
-guide = Button(root, text="User Guide")
-guide.grid(columnspan=2, row=0, column=3, ipadx=10, ipady=3, pady=10,padx=3)
+guide = Button(root, text="User Guide", bg="#0777FF", font=("Courier New", 9, 'bold'))
+guide.grid(columnspan=2, row=0, column=3, ipadx=9, ipady=2, pady=10,padx=3)
 # ---
 
 # History ---
