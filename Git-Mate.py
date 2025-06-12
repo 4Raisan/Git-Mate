@@ -29,8 +29,8 @@ guide.grid(columnspan=2, row=0, column=3, ipadx=9, ipady=2, pady=10,padx=3)
 # ---
 
 # History ---
-history = Button(root, text="History", state=DISABLED)
-history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
+history = Button(root, text="History", font=("Courier New", 9, 'bold'), state=DISABLED)
+history.grid(columnspan=2, row=0, column=5, ipadx=9, ipady=2, pady=10,padx=3)
 
 def avblhistory():
     history = Button(root, text="History")
