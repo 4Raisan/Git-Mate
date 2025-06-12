@@ -59,6 +59,7 @@ def signgreen():
     pathsign.grid(row=1, column=1)
 
 def signred():
+    global pathsign
     pathsign = Label(root,text="❌", fg='red')
     pathsign.grid(row=1, column=1)
 
