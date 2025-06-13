@@ -140,10 +140,10 @@ epathclear.grid(row=2, column=8)
 # Instruction 3/4/5-Row---------------------------------------------------
 
 instruction_avoid = Label(root, text="\nAvoid use, if your last commits have File Uploads !", fg='red')
-instruction_avoid.grid(rowspan=2, columnspan=8, row=3, column=2)
+instruction_avoid.grid(rowspan=2, columnspan=10, row=3, column=0)
 
-instruction_redo = Label(root, text="Remember their is no REDOs")
-instruction_redo.grid(columnspan=8, row=5, column=1)
+instruction_redo = Label(root, text="... Remember their is no REDOs ...")
+instruction_redo.grid(columnspan=10, row=5, column=0)
 
 #Z Instruction 3/4/5-Row---------------------------------------------------
 # DONE
