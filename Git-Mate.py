@@ -39,14 +39,14 @@ def avblhistory():
 # Count ---
 refreshCount = 0
 scnt = Label(root, text=f"Undos: {refreshCount}", bg="#FBFF00", font=("Courier New", 9, 'bold'))
-scnt.grid(columnspan=2, row=0, column=7, ipadx=9, ipady=5)
+scnt.grid(columnspan=2, row=0, column=7, ipadx=9, ipady=5, padx=3)
 
 def totcount(new):   # UPDATE Total count + Refresh GUI
     global refreshCount
     new = int(new)
     refreshCount+=new
     scnt = Label(root, text=f"Undos: {refreshCount}", bg="#FBFF00", font=("Courier New", 9, 'bold'))
-    scnt.grid(columnspan=2, row=0, column=7, ipadx=9, ipady=5)
+    scnt.grid(columnspan=2, row=0, column=7, ipadx=9, ipady=5, padx=3)
 
 #Z Top Row --------------------------------------------------------
 
@@ -85,7 +85,7 @@ path.grid(row=1 ,column=2)
 epath = Entry(root, fg="grey")
 #epath.insert(0,"Enter REPOs local path...")
 epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
-epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='w')
+epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
 
 #Z  PATH 1-Row---------------------------------------------------
 
