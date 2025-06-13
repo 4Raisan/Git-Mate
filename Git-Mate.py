@@ -85,7 +85,7 @@ path.grid(row=1 ,column=2)
 epath = Entry(root, fg="grey")
 #epath.insert(0,"Enter REPOs local path...")
 epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
-epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=63, pady=5, sticky='e')
+epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='e')
 
 #Z  PATH 1-Row---------------------------------------------------
 
