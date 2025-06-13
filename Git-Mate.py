@@ -82,10 +82,13 @@ path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=2)
 
 # Path Entry ---
-epath = Entry(root, fg="grey")
-#epath.insert(0,"Enter REPOs local path...")
-epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
-epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
+def pathentryallow():   # path edits avilable
+    global epath
+    epath = Entry(root, fg="grey")
+    #epath.insert(0,"Enter REPOs local path...")
+    epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
+    epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
+pathentryallow()
 
 #Z  PATH 1-Row---------------------------------------------------
 
