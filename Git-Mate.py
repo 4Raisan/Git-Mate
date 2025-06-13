@@ -34,19 +34,19 @@ history.grid(columnspan=2, row=0, column=5, ipadx=9, ipady=2, pady=10,padx=3)
 
 def avblhistory():
     history = Button(root, text="History", bg="#C100F7", font=("Courier New", 9, 'bold'))
-    history.grid(columnspan=2, row=0, column=5, ipadx=10, ipady=3, pady=10,padx=3)
+    history.grid(columnspan=2, row=0, column=5, ipadx=9, ipady=2, pady=10,padx=3)
 
 # Count ---
 refreshCount = 0
-scnt = Label(root, text=f" Undos: {refreshCount}")
-scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
+scnt = Label(root, text=f"Undos: {refreshCount}", bg="#FBFF00", font=("Courier New", 9, 'bold'))
+scnt.grid(columnspan=2, row=0, column=7, ipadx=9, ipady=5)
 
 def totcount(new):   # UPDATE Total count + Refresh GUI
     global refreshCount
     new = int(new)
     refreshCount+=new
-    scnt = Label(root, text=f"Undos: {refreshCount}")
-    scnt.grid(columnspan=2, row=0, column=7, ipadx=10, ipady=3, pady=10)
+    scnt = Label(root, text=f"Undos: {refreshCount}", bg="#FBFF00", font=("Courier New", 9, 'bold'))
+    scnt.grid(columnspan=2, row=0, column=7, ipadx=9, ipady=5)
 
 #Z Top Row --------------------------------------------------------
 
