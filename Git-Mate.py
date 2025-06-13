@@ -3,7 +3,7 @@ root = Tk()
 from subprocess import *
 import os
 
-root.title("Git-Mate")
+root.title("Git-Mate   - v1.0")
 root.iconbitmap(r"C:\Users\4Raisan\Desktop\GitHub\Git-Mate\just-logo.ico")
 # custom windows size
 #root.geometry("400x300")
