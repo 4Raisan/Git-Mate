@@ -159,9 +159,10 @@ instruction_redo.grid(columnspan=10, row=5, column=0)
 def checkflow():
     if check_vrbl.get()==1:
         passcheck()
+        pathentryaccess(False)
     else:
         pathsign.destroy() 
-
+        pathentryaccess(True)  
 
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()   # check_vrbl is an IntVar object - check_vrbl.get() 1/0
