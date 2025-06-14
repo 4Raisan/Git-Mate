@@ -88,7 +88,11 @@ def pathentryallow():   # path edits avilable
     #epath.insert(0,"Enter REPOs local path...")
     epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
     epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
-pathentryallow()
+
+
+def pathentrydenied():
+    epath.config(state='readonly')
+
 
 #Z  PATH 1-Row---------------------------------------------------
 
@@ -156,6 +160,7 @@ instruction_redo.grid(columnspan=10, row=5, column=0)
 def checkflow():
     if check_vrbl.get()==1:
         passcheck()
+        pathentrydenied()
     else:
         pathsign.destroy()   
 
