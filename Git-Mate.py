@@ -111,10 +111,12 @@ def plusone():
 def minusone():
     global ecountvalue, ecount
     if ecountvalue>1:
+        ecount.config(state='normal')
         ecountvalue-=1
         ecount.delete(0, END)
         ecount.insert(0, f"{ecountvalue}")
-        
+        ecount.config(state='disabled', disabledbackground='white', disabledforeground='black')
+
 def clearepath():
     epath.delete(0, END)
     epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=60, pady=5)
