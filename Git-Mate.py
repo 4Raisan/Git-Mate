@@ -82,17 +82,13 @@ path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=2)
 
 # Path Entry ---
-def pathentryallow():   # path edits avilable
-    global epath
-    epath = Entry(root, fg="grey")
-    #epath.insert(0,"Enter REPOs local path...")
-    epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
-    epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
+epath = Entry(root, fg="grey")
+#epath.insert(0,"Enter REPOs local path...")
+epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
+epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
 
-
-def pathentrydenied():
+def pathentrycontrol():
     epath.config(state='readonly')
-
 
 #Z  PATH 1-Row---------------------------------------------------
 
@@ -160,7 +156,7 @@ instruction_redo.grid(columnspan=10, row=5, column=0)
 def checkflow():
     if check_vrbl.get()==1:
         passcheck()
-        pathentrydenied()
+        pathentrycontrol()
     else:
         pathsign.destroy()   
 
