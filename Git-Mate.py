@@ -101,10 +101,12 @@ epath.bind("<FocusOut>", nofocusepath)
 # Main Functions of Row 2
 def plusone():
     global ecountvalue, ecount
+    ecount.config(state='normal')
     ecountvalue+=1
     ecount.delete(0, END)
     ecount.insert(0,f"{ecountvalue}")
     ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
+    ecount.config(state='disabled', disabledbackground='white', disabledforeground='black')
     
 def minusone():
     global ecountvalue, ecount
@@ -112,7 +114,7 @@ def minusone():
         ecountvalue-=1
         ecount.delete(0, END)
         ecount.insert(0, f"{ecountvalue}")
-
+        
 def clearepath():
     epath.delete(0, END)
     epath.grid(columnspan=6, row=1, column=3, ipady=3,ipadx=60, pady=5)
@@ -128,6 +130,7 @@ def counter():
     ecount.insert(0,f"{ecountvalue}")
     ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
 counter()
+ecount.config(state='disabled', disabledbackground='white', disabledforeground='black')
 
 ecountplus = Button(root, text=" + ", command=plusone)
 ecountplus.grid(row=2, column=3)
@@ -137,6 +140,7 @@ ecountminus.grid(row=2, column=3, sticky='e')
 
 epathclear = Button(root, text="Clear Path", command=clearepath)
 epathclear.grid(row=2, column=8)
+
 
 #Z Numbers 2-Row---------------------------------------------------
 # DONE
@@ -207,6 +211,7 @@ def undo():
     undoDenied()    # Disable undo button
     pathsign.destroy()  # Destroy the path Signs
     counter()   # Reset undo-counter
+    pathentryaccess(True)
 
 
 # RUN - CMD
