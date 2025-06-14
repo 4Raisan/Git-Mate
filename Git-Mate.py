@@ -87,8 +87,11 @@ epath = Entry(root, fg="grey")
 epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
 epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
 
-def pathentrycontrol():
-    epath.config(state='readonly')
+def pathentryaccess(choise):
+    if choise:
+        epath.config(state='normal')
+    else:
+        epath.config(state='readonly')
 
 #Z  PATH 1-Row---------------------------------------------------
 
@@ -156,9 +159,9 @@ instruction_redo.grid(columnspan=10, row=5, column=0)
 def checkflow():
     if check_vrbl.get()==1:
         passcheck()
-        pathentrycontrol()
     else:
-        pathsign.destroy()   
+        pathsign.destroy() 
+
 
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()   # check_vrbl is an IntVar object - check_vrbl.get() 1/0
