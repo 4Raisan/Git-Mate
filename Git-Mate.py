@@ -63,8 +63,24 @@ def signred():
     pathsign = Label(root,text="❌", fg='red')
     pathsign.grid(row=1, column=1)
 
+# Path Label ---
+path = Label(root, text="PATH : ")
+path.grid(row=1 ,column=2)
+
+# Path Entry ---
+epath = Entry(root, fg="grey")
+epath.insert(0,"Enter REPOs local path...")
+#epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
+epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
+
+# Path Entry Accesss ---
+def pathentryaccess(choise):
+    if choise:
+        epath.config(state='normal')
+    else:
+        epath.config(state='readonly')
+
 # Path Entry Focus ---
-''' Test
 def focusepath(event):
     epath.delete(0, END)
     epath.config(fg="black")
@@ -75,23 +91,7 @@ def nofocusepath(event):
          epath.config(fg="gray")
 
 epath.bind("<FocusIn>", focusepath)
-epath.bind("<FocusOut>", nofocusepath)'''
-
-# Path Label ---
-path = Label(root, text="PATH : ")
-path.grid(row=1 ,column=2)
-
-# Path Entry ---
-epath = Entry(root, fg="grey")
-#epath.insert(0,"Enter REPOs local path...")
-epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
-epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
-
-def pathentryaccess(choise):
-    if choise:
-        epath.config(state='normal')
-    else:
-        epath.config(state='readonly')
+epath.bind("<FocusOut>", nofocusepath)
 
 #Z  PATH 1-Row---------------------------------------------------
 
