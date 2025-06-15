@@ -168,7 +168,8 @@ def checkflow():
         pathentryaccess(False)
     else:
         pathsign.destroy() 
-        pathentryaccess(True)  
+        pathentryaccess(True) 
+        undoDenied()    # Disable undo button 
 
 # Variable to track checkbox state (1 = checked, 0 = unchecked) 
 check_vrbl = IntVar()   # check_vrbl is an IntVar object - check_vrbl.get() 1/0
