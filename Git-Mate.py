@@ -68,7 +68,7 @@ path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=2)
 
 # Path Entry ---
-epath = Entry(root, fg="grey")
+epath = Entry(root, fg="grey", font=("Helvetica", 10))
 epath.insert(0,"Enter REPOs local path...")
 #epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
 epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
@@ -127,18 +127,18 @@ count.grid(row=2, column=2)
 
 def counter():
     global ecountvalue, ecount
-    ecount = Entry(root, width=2)
+    ecount = Entry(root, width=2, font=("Courier New", 11, 'bold'))
     ecountvalue = 1
     ecount.insert(0,f"{ecountvalue}")
-    ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3)
+    ecount.grid(row=2, column=3, pady=5, sticky='w', ipady=3, padx=1)
 counter()
 ecount.config(state='disabled', disabledbackground='white', disabledforeground='black')
 
-ecountplus = Button(root, text=" + ", command=plusone)
-ecountplus.grid(row=2, column=3)
+ecountplus = Button(root, text=" + ", command=plusone, font=("arial", 11))
+ecountplus.grid(columnspan=2, row=2, column=3)
 
-ecountminus = Button(root, text=" - ", command=minusone)
-ecountminus.grid(row=2, column=3, sticky='e')
+ecountminus = Button(root, text=" - ", command=minusone, font=("arial", 11))
+ecountminus.grid(columnspan=2, row=2, column=3, ipadx=2, sticky='e')
 
 epathclear = Button(root, text="Clear Path", command=clearepath)
 epathclear.grid(row=2, column=8)
