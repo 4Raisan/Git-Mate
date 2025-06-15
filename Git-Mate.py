@@ -68,10 +68,10 @@ path = Label(root, text="PATH : ")
 path.grid(row=1 ,column=2)
 
 # Path Entry ---
-epath = Entry(root, fg="grey", font=("Helvetica", 10))
+epath = Entry(root, fg="grey", font=("Segoe UI", 10))
 epath.insert(0,"Enter REPOs local path...")
 #epath.insert(0,r"C:\Users\4Raisan\Downloads\Animes")
-epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=76, pady=5, sticky='ew')
+epath.grid(columnspan=6, row=1, column=3, ipady=3, ipadx=65, pady=5, sticky='ew')
 
 # Path Entry Accesss ---
 def pathentryaccess(choise):
