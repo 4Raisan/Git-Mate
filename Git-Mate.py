@@ -1,6 +1,7 @@
 from tkinter import *
 root = Tk()
 from subprocess import *
+from tkinter.scrolledtext import ScrolledText
 import os
 
 root.title("Git-Mate   - v1.0")
