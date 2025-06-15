@@ -55,13 +55,13 @@ def totcount(new):   # UPDATE Total count + Refresh GUI
 # Check Signs ---
 def signgreen():
     global pathsign
-    pathsign = Label(root,text="✅", fg='green')
-    pathsign.grid(row=1, column=1)
+    pathsign = Label(root,text=" ✅", fg='green')
+    pathsign.grid(columnspan=2, row=1, column=1, sticky='w')
 
 def signred():
     global pathsign
-    pathsign = Label(root,text="❌", fg='red')
-    pathsign.grid(row=1, column=1)
+    pathsign = Label(root,text=" ❌", fg='red')
+    pathsign.grid(columnspan=2, row=1, column=1, sticky='w')
 
 # Path Label ---
 path = Label(root, text="PATH : ")
