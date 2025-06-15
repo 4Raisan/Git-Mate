@@ -36,6 +36,10 @@ def avblhistory():
     history = Button(root, text="History", bg="#C100F7", font=("Courier New", 9, 'bold'))
     history.grid(columnspan=2, row=0, column=5, ipadx=9, ipady=2, pady=10,padx=3)
 
+def showhistory():
+    myhis = run(["git log --oneline"], shell=True, capture_output=True, text=True)
+    print(myhis.stdout)
+
 # Count ---
 refreshCount = 0
 scnt = Label(root, text=f"Undos: {refreshCount}", bg="#FBFF00", font=("Courier New", 9, 'bold'))
