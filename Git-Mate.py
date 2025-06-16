@@ -3,6 +3,7 @@ root = Tk()
 from subprocess import *
 from tkinter.scrolledtext import ScrolledText
 import os
+import webbrowser as wb
 
 root.title("Git-Mate   - v1.0")
 root.iconbitmap(r"C:\Users\4Raisan\Desktop\GitHub\Git-Mate\just-logo.ico")
