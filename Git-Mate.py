@@ -211,10 +211,10 @@ def passcheck():
     direpath = os.path.isdir(readypath)
     if direpath:
         undoapproved()
-        avblhistory()
+        avblhistory(True)
         signgreen()
     else:
-        signred()        
+        signred()      
 direpath = False
 
 def undo():
