@@ -224,6 +224,7 @@ def undo():
     pathsign.destroy()  # Destroy the path Signs
     counter()   # Reset undo-counter
     pathentryaccess(True)
+    avblhistory(False)
 
 
 # RUN - CMD
